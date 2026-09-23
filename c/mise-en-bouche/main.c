@@ -1,26 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void decrementer(int *p) {
-    // exercice 17
-    --*p;
+#define SIZE 8
+
+void reverseArray(int *array, int size) {
+    for (int i = 0; i < size / 2; ++i) {
+        int temp = array[i];
+        array[i] = array[size - 1 - i];
+        array[size - 1 - i] = temp;
+    }
 }
 
-void multiplier(int *n, int p) {
-    // exercice 18
-    *n *= p;
-}
+int main(void) {
+    int array[SIZE];
 
-short main(void) {
-    int a = 10;
-    printf("%d", a);
-    decrementer(&a);
-    printf("\n%d", a);
+    for (int i = 0; i < SIZE; ++i) {
+        printf("Please, enter number %d/8: ", i + 1);
+        scanf("%d", &array[i]);
+    }
 
-    a = 10;
-    printf("\n\n%d", a);
-    multiplier(&a, 2);
-    printf("\n%d", a);
+    reverseArray(array, SIZE);
+
+    printf("\nReversed array: ");
+    for (int i = 0; i < SIZE; ++i) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
 
     return EXIT_SUCCESS;
 }
