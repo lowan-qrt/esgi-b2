@@ -22,8 +22,4 @@ func main() {
 			fmt.Println(mots[i])
 		}
 	}
-
-	var s string
-
-fmt.Printf("%q\n", s)
 }
