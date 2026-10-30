@@ -1,0 +1,3 @@
+Cours Go|Les structs et les méthodes|go,cours
+Courses|Acheter du pain et du lait|perso
+Idée|Faire une app de notes en Go|go,idée
